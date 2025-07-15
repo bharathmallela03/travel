@@ -1,0 +1,139 @@
+:root {
+  --primaryColor: hsl(199, 100%, 33%);
+  --secondaryColor: hsl(187, 85%, 43%);
+  --gradientColor: linear-gradient(to right, hsl(187, 85%, 43%), hsl(199, 100%, 33%));
+  --whiteColor: hsl(0, 0%, 100%);
+  --blackColor: hsl(201, 33%, 16%);
+  --textColor: hsl(240, 4%, 36%);
+  --whiteColorDeam: hsl(0, 0%, 93%);
+  --grayText: rgb(190, 190, 190);
+  --inputColor: rgb(239, 239, 239);
+  --bodyColor: rgb(240, 240, 240);
+  --cardBG: rgb(255, 255, 255);
+}
+
+.navBarSection {
+  width: 100%;
+}
+
+.header {
+  position: fixed;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: var(--whiteColorDeam);
+  width: 100%;
+  padding: 1rem;
+  z-index: 1000;
+  box-shadow: 0 2px 4px rgba(2, 15, 29, 0.904);
+}
+.header .logoDiv .logo {
+  display: flex;
+  align-items: center;
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: var(--blackColor);
+  text-decoration: none;
+}
+.header .logoDiv .logo .icon {
+  font-size: 25px;
+  color: var(--primaryColor);
+  margin-right: 5px;
+}
+.header .navBar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.header .navBar .navLists {
+  display: flex;
+  gap: 1.5rem;
+}
+.header .navBar .navLists .navItems {
+  list-style: none;
+}
+.header .navBar .navLists .navItems .navLink {
+  text-decoration: none;
+  color: var(--textColor);
+  font-size: 1rem;
+  font-weight: 600;
+  transition: 0.3s;
+}
+.header .navBar .navLists .navItems .navLink:hover {
+  color: var(--primaryColor);
+}
+.header .navBar .btn {
+  background: var(--primaryColor);
+  padding: 0.7rem 1.5rem;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+  transition: 0.3s;
+}
+.header .navBar .btn a {
+  color: var(--whiteColor);
+  text-decoration: none;
+  font-weight: 600;
+}
+.header .navBar .btn:hover {
+  background: var(--secondaryColor);
+}
+.header .navBar .closeNavbar {
+  display: none;
+}
+.header .toggleNavbar {
+  display: none;
+  cursor: pointer;
+}
+.header .toggleNavbar .icon {
+  font-size: 25px;
+  color: var(--primaryColor);
+}
+.header .toggleNavbar:hover {
+  color: var(--secondaryColor);
+}
+@media screen and (max-width: 768px) {
+  .header .navBar {
+    position: absolute;
+    background: var(--whiteColorDeam);
+    height: max-content;
+    width: 80%;
+    border-radius: 1rem;
+    top: -500rem;
+    left: 50%;
+    padding: 1rem;
+    transform: translate(-50%);
+    z-index: 2000;
+    box-shadow: 0 2px 4px rgba(2, 15, 29, 0.904);
+    transition: 0.3s ease-in-out;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+  }
+  .header .navBar .navLists {
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    margin: auto;
+    padding: 0.5rem 0;
+  }
+  .header .navBar .closeNavbar {
+    display: block;
+    position: absolute;
+    top: 1rem;
+    right: 1.5rem;
+    color: var(--secondaryColor);
+    cursor: pointer;
+  }
+  .header .navBar .closeNavbar:hover {
+    color: var(--primaryColor);
+  }
+  .header .activeNavbar {
+    top: 6rem;
+  }
+  .header .toggleNavbar {
+    display: block;
+  }
+}
+
+/*# sourceMappingURL=Navbar.css.map */
