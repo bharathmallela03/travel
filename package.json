@@ -1,5 +1,7 @@
 {
   "name": "travel",
+  "description": "A travel website",
+  "homepage": "https://bharathmallela03.github.io/travel/",
   "private": true,
   "version": "0.0.0",
   "type": "module",
